@@ -19,7 +19,9 @@ def getKeywords(text):
     return [word for word, score in custom_kw_extractor.extract_keywords(text)]
 
 
-f = open("data.txt", mode='r')
+filename = input("Enter file name: ")
+
+f = open(filename, mode='r')
 text = f.read()
 
 # Get summary
@@ -32,17 +34,25 @@ keywords = getKeywords(text)
 for k in keywords:
   getImage(k).save("output/images/"+k+".jpg")
 
+print()
+print(" ----- RESULT -----")
 
 # Summary printing
+print("SUMMARY:")
 print(summary)
+print()
 
 # Keyword printing
-print("KEYWORDS:", end=" ")
+print("KEYWORDS:")
 for k in keywords[:-1]:
   print(k, end=", ")
 print(keywords[-1])
+print()
 
 # Frequent printing
-print(find_most_frequent_word(text.splitlines(), 5, keywords[0]))
+print("LOCATION OF KEYWORDS IN DOCUMENT:")
+for k in keywords:
+  print(k + " is mentioned around line ", end="")
+  print(find_most_frequent_word(text.splitlines(), 5, keywords[3]))
 
 f.close()

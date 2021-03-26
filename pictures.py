@@ -5,8 +5,9 @@ from io import BytesIO
 def getImage(keyword):
     key = "AIzaSyBKbf_aR_m4i552iOuPAPb-VOJJkLn74yo"
     search_engine_id = "f980e922532fe1c1a"
-    query = 'https://www.googleapis.com/customsearch/v1?' + 'key=' + key + '&cx=' + search_engine_id +'&q=' + keyword + '&searchType=image'
-    response = requests.get(query)
+    payload = {'key': key, 'cx': search_engine_id, 'q': keyword, 'searchType': "image"}
+    query = 'https://www.googleapis.com/customsearch/v1?'
+    response = requests.get(query, params=payload)
 
     i = 0
     uri = ""
