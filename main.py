@@ -2,6 +2,7 @@
 import yake
 from freq import find_most_frequent_word
 from pictures import getImage
+from summary import getSummary
 from PIL import Image
 
 def getKeywords(text):
@@ -21,49 +22,19 @@ def getKeywords(text):
 f = open("data.txt", mode='r')
 text = f.read()
 
-# Get keywords and images
+# Get summary
+summary = getSummary(text)
+
+# Get keywords
 keywords = getKeywords(text)
-images = [getImage(k) for k in keywords]
 
-# Crop images
-
-dims = []
-for im in images:
-  w, h = im.size
-  dims.append(w)
-  dims.append(h)
-
-minDim = min(dims)
-new_width = minDim
-new_height = minDim
-
-for i in range(len(images)):
-  im = images[i]
-  width, height = im.size
-
-  left = (width - new_width)/2
-  top = (height - new_height)/2
-  right = (width + new_width)/2
-  bottom = (height + new_height)/2
-
-  images[i] = im.crop((left, top, right, bottom))
-
-# Combine images
-
-left_offset = 0
-top_offset = 0
-blank_image = Image.new("RGB", (minDim*2, minDim*2))
-counter = 0
-
-for _ in range(2):
-  for _ in range(2):
-    blank_image.paste(images[counter], (left_offset, top_offset))
-    top_offset += new_height
-    counter += 1
-  left_offset += new_width
+# Save images
+for k in keywords:
+  getImage(k).save("output/images/"+k+".jpg")
 
 
-blank_image.save("final.jpg")
+# Summary printing
+print(summary)
 
 # Keyword printing
 print("KEYWORDS:", end=" ")
@@ -71,7 +42,7 @@ for k in keywords[:-1]:
   print(k, end=", ")
 print(keywords[-1])
 
-
+# Frequent printing
 print(find_most_frequent_word(text.splitlines(), 5, keywords[0]))
 
 f.close()

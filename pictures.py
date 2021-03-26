@@ -14,7 +14,5 @@ def getImage(keyword):
         uri = response.json()['items'][i]['link']
         i += 1
     
-    print(uri)
-
     img_PIL = Image.open(requests.get(uri, stream=True).raw)
     return img_PIL
