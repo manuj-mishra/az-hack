@@ -1,4 +1,3 @@
-# from keyword import getKeywords
 import yake
 from freq import find_most_frequent_word
 from pictures import getImage
