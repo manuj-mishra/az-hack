@@ -8,12 +8,11 @@ This is a proof-of-concept that shows that text can be transformed into:
 * A folder of images associated with the above ngrams
 * Where these keyphrases appear in the original text
 
-To see the our proposal for a wireframe of the final products frontend, please see below:
+To see the our proposal for a wireframe of the final products frontend, please see below:  
 https://www.figma.com/file/xYVoIMvpBmZaPPbDu26vs1/Represent?node-id=0%3A1
 
-To see the youtube video of our pitch deck, please see below:
-
-
+To see the youtube video of our pitch deck, please see below:  
+https://youtu.be/XQjfuX85m50
 
 ## Getting Started
 
