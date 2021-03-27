@@ -7,8 +7,8 @@
 
 This is a proof-of-concept that shows that text can be transformed into:
 * A short summary
-* A list of ngrams (keywords/keyphrases)
-* A folder of images associated with the above ngrams
+* A list of n-grams (keywords/keyphrases of up to 3 words)
+* A folder of images associated with the above n-grams
 * Where these keyphrases appear in the original text
 
 To see the our proposal for a wireframe of the final products frontend, please see below:  
@@ -51,7 +51,7 @@ $ Enter file path: data.txt
 * **Shrimat Kapoor** 
 
 ## Acknowledgments
-
+Thank you to all these people for making this project possible:
 * Jo Baker and the AstraZeneca Team for organising this hackathon
 * Daniel Goude and Robert Radcliffe for their mentorship and guidance
 * Shivani Raja for the advice and logo 
