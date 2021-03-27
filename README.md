@@ -11,11 +11,15 @@ This is a proof-of-concept that shows that text can be transformed into:
 * A folder of images associated with the above n-grams
 * Where these keyphrases appear in the original text
 
-To see the our proposal for a wireframe of the final products frontend, please see below:  
+**This codebase is the first half of our submission. The second half is a wireframe for the front-end which can be accessed here:**  
 https://www.figma.com/file/xYVoIMvpBmZaPPbDu26vs1/Represent?node-id=0%3A1
 
 To see the youtube video of our pitch deck, please see below:  
 https://youtu.be/XQjfuX85m50
+
+## Reading Source Code
+
+To see a linear representation of our code, please see the `Represent (Team 028).pdf` file. This is a static version of our Jupyter notebook in the `jupyter` folder. Alternatively, you can look through the source code in the `src` folder. The code in both folders in almost identical but formatted in different ways.  
 
 ## Getting Started
 
