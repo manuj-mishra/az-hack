@@ -13,7 +13,7 @@ def find_most_frequent_word(data, window_size, keyword):
     for i in range(0, len(data), window_size):
         curr_count = 0
         for j in range(i, min(i+window_size, len(data))):
-            curr_count += count_words_in_line(data[j], keyword)
+            curr_count += data[j].count(keyword)
             # do all the counting here
         if count_max < curr_count:
             count_max = curr_count
