@@ -2,6 +2,8 @@
 Your personal assistant for information visualisation.
 (Created for the AstraZeneca Neurodiversity Hackathon 2021).
 
+![RE.PRESENT logo](https://user-images.githubusercontent.com/24252542/112717386-35b9f880-8ee4-11eb-9f76-2065e0a89af5.jpeg)
+
 This is a proof-of-concept that shows that text can be transformed into:
 * A short summary
 * A list of ngrams (keywords/keyphrases)
